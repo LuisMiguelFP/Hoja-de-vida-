@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Hoja de Vida</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .perfil-img {
+            width: 200px;
+            /* Ajusta el tamaño según tu preferencia */
+            height: 200px;
+            object-fit: cover;
+            /* Mantiene la proporción sin distorsión */
+            transition: transform 1s;
+            z-index: 1;
+        }
+
+        .perfil-img:hover {
+            transform: rotateY(360deg);
+        }
+
+        .subirEnlaces {
+            position: relative;
+            z-index: 10;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-9 text-left" style="position: absolute; margin-top: -10px;">
+                <img id="profile-img" src="mi carita.jpeg" alt="Foto de perfil" class="rounded-circle mb-3 perfil-img">
+                <h2>Luis Miguel Franco Perez</h2>
+                <p>Ingeniero en Informática y Computación</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6" style="margin-top: 300px;">
+                <h3>Información Personal</h3>
+                <ul>
+                    <li><strong>Teléfono:</strong> +57 3187752411</li>
+                    <li><strong>Email:</strong> ingenierofranco18@gmail.com</li>
+                    <li><strong>Dirección:</strong> cll 11c # 45 -17 Villajardín Estambul</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h3>Educación</h3>
+                <div class="subirEnlaces">
+                    <a href="https://www.liceolasnieves.edu.co/" style="font-size:25px;" target="_blank">Liceo Nuestra
+                        Señora De Las Nieves</a>
+                    <p><em>Lorem ipsum dolor sit, amet consectetur mmodi corrupti nesciunt illum!</em> (2021/02/10 -
+                        2023/11/15)</p>
+                </div>
+                <hr>
+                <div class="subirEnlaces">
+                    <a href="https://urepublicana.edu.co/pages/" target="_blank" style="font-size: 25px;"> Corporacion
+                        Universitaria republicana</a>
+                    <p><em>Lorem ipsum dolor sit, amet consectetur mmodi corrupti nesciunt illum!</em> (2021/02/10 -
+                        2023/11/15)</p>
+                    <hr>
+                </div>
+                <div>
+                    <a style="font-size: 25px;" href="https://www.ucaldas.edu.co/portal/" target="_blank">Universidad de
+                        Caldas</a>
+                    <p><em>Lorem ipsum dolor sit, amet consectetur mmodi corrupti nesciunt illum!</em> (2021/02/10 -
+                        2023/11/15)</p>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Experiencia Laboral</h3>
+                <div>
+                    <h4>Blessings</h4>
+                    <p><em>Vendedor</em> (15/03/2020 - 18/09/2022)</p>
+                    <p>Me dedicaba a la venta de joyería y también me encargaba de la bodega.</p>
+                </div>
+                <div>
+                    <h4>MI Tienda el progreso</h4>
+                    <p><em>Vendedor</em> (2022/10/2 - n/n)</p>
+                    <p>soy indenpendiente ahora de mi negocio junto con mi padre .</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h3>Habilidades</h3>
+                <ul>
+                    <li>conocimientos en mantenimieto y reaparacion de computadores</li>
+                    <li>nivel de ingles B1 _B2</li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <button class="btn-flotante" id="toggleTheme">Cambiar Tema Claro</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById("toggleTheme").addEventListener("click", function () {
+            document.body.classList.toggle("tema-claro");
+            const button = document.getElementById("toggleTheme");
+            if (document.body.classList.contains("tema-claro")) {
+                button.textContent = "Cambiar a Tema Oscuro";
+            } else {
+                button.textContent = "Cambiar a Tema Claro";
+            }
+        });
+    </script>
+</body>
+
+</html>
